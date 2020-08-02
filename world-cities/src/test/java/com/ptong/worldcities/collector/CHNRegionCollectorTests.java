@@ -13,7 +13,7 @@ import com.ptong.worldcities.utils.JsonUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class CHNRegionsCollectorTests {
+public class CHNRegionCollectorTests {
 
     private final String CITY_RESOURCE_URI = Constants.CHN_CITIES_RESOURCE_URI;
     private final String REGION_RESOURCE_URI = Constants.CHN_REGIONS_RESOURCE_URI;

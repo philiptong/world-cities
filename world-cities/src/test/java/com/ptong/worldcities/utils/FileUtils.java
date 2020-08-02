@@ -26,6 +26,10 @@ public class FileUtils {
         OutputStreamWriter osw = null;
         File file = new File(filePath);
         BufferedWriter bufw = null;
+        if (!file.getParentFile().exists()) {
+            file.getParentFile().mkdirs();
+        }
+
         if (!file.exists()) {
             file.createNewFile();
         }
