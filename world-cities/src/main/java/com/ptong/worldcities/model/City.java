@@ -13,8 +13,8 @@ public class City implements Serializable {
     private double lat;
     private double lng;
     private String countryName;
-    private String isoCode2;
-    private String isoCode3;
+    private String alpha2Code;
+    private String alpha3Code;
     private String adminName;
 
 }

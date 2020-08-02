@@ -10,6 +10,7 @@ public class Country implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String name;
-    private String isoCode2;
-    private String isoCode3;
+    private String alpha2Code;
+    private String alpha3Code;
+    private String numericCode;
 }
