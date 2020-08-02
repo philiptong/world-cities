@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ptong.worldcities.model.City;
 
-public interface HtmlParser {
+public interface ResourceParser {
 
     List<City> parseHtml(String html);
 

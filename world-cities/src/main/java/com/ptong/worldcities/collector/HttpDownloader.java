@@ -7,11 +7,11 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 
-public abstract class HtmlDownloader {
+public abstract class HttpDownloader {
 
     private final HttpClient client;
 
-    protected HtmlDownloader() {
+    protected HttpDownloader() {
         this.client = HttpClient.newHttpClient();
     }
 
