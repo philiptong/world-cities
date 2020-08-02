@@ -16,13 +16,8 @@ public class ChinaCitiesCollector extends HttpDownloader implements ResourcePars
         super();
     }
 
-    public String downloadHtml(String uri) {
-        String html = "";
-        try {
-            html = this.get(uri);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
+    public String downloadHtml(String uri) throws IOException, InterruptedException {
+        String html = this.get(uri);
         return html;
     }
 
