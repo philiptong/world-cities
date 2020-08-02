@@ -3,7 +3,7 @@ package com.ptong.worldcities.collector;
 import java.io.IOException;
 import java.util.List;
 
-import com.ptong.worldcities.collector.country.ChinaRegionsCollector;
+import com.ptong.worldcities.collector.region.ChinaRegionsCollector;
 import com.ptong.worldcities.config.Constants;
 import com.ptong.worldcities.model.City;
 import com.ptong.worldcities.utils.FileUtils;

@@ -1,4 +1,4 @@
-package com.ptong.worldcities.collector.country;
+package com.ptong.worldcities.collector.region;
 
 import java.io.IOException;
 import java.util.LinkedList;
