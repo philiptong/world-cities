@@ -9,7 +9,7 @@ import lombok.Data;
  * Principle administrative division for Countries, ISO 3166-2
  */
 @Data
-public class AdminDivision implements Serializable {
+public class Region implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

@@ -5,7 +5,7 @@ import java.io.Serializable;
 import lombok.Data;
 
 /**
- * Second/Third level administrative division
+ * Second/Third level administrative division, cities or towns
  */
 @Data
 public class City implements Serializable {
@@ -16,6 +16,6 @@ public class City implements Serializable {
     private double lat;
     private double lng;
     private String countryName;
-    private String adminDivisionName;
+    private String regionName;
 
 }

@@ -29,7 +29,7 @@ public class ChinaCitiesCollectorTests {
     public void shouldParseHtml() throws IOException, InterruptedException {
         ChinaCitiesCollector collector = new ChinaCitiesCollector();
         String html = FileUtils.readFile(HTML_FILE_PATH);
-        List<City> cities = collector.parseHtml(html);
+        List<City> cities = collector.parseCityHtml(html);
         System.out.println(cities);
         Assertions.assertTrue(cities.size() == 684);
     }

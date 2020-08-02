@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.ptong.worldcities.collector.CityCollector;
+import com.ptong.worldcities.model.Region;
 import com.ptong.worldcities.model.City;
 
 import org.jsoup.Jsoup;
@@ -18,7 +19,7 @@ public class ChinaCitiesCollector extends CityCollector {
     }
 
     @Override
-    public List<City> parseHtml(String html) {
+    public List<City> parseCityHtml(String html) {
         Document doc = Jsoup.parse(html);
         Elements tds = doc.select("td");
         List<City> cities = new LinkedList<>();
@@ -31,5 +32,11 @@ public class ChinaCitiesCollector extends CityCollector {
             }
         });
         return cities;
+    }
+
+    @Override
+    public List<Region> parseRegionHtml(String html) {
+        // TODO Auto-generated method stub
+        return null;
     }
 }

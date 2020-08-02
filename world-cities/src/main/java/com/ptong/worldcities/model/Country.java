@@ -17,5 +17,5 @@ public class Country implements Serializable {
     private String alpha2Code;
     private String alpha3Code;
     private String numericCode;
-    private List<AdminDivision> adminDivisions;
+    private List<Region> regions;
 }
