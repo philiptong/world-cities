@@ -30,7 +30,7 @@ public class ChinaCitiesCollectorTests {
         String html = FileUtils.readFile(HTML_FILE_PATH);
         List<City> cities = collector.parseHtml(html);
         System.out.println(cities);
-        Assertions.assertTrue(cities.size() > 0);
+        Assertions.assertTrue(cities.size() == 684);
     }
 
 }

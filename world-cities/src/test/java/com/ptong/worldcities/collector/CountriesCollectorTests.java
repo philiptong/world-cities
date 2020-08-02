@@ -30,6 +30,6 @@ public class CountriesCollectorTests {
         String html = FileUtils.readFile(HTML_FILE_PATH);
         List<Country> countries = collector.parseHtml(html);
         System.out.println(countries);
-        Assertions.assertTrue(countries.size() > 0);
+        Assertions.assertTrue(countries.size() == 249);
     }
 }
