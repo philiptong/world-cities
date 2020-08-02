@@ -10,15 +10,10 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-public class ChinaCitiesCollector extends HttpDownloader implements ResourceParser {
-
-    public ChinaCitiesCollector() {
-        super();
-    }
+public class ChinaCitiesCollector extends CitiesCollector {
 
     public String downloadHtml(String uri) throws IOException, InterruptedException {
-        String html = this.get(uri);
-        return html;
+        return this.get(uri);
     }
 
     @Override
