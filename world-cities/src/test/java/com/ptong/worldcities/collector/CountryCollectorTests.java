@@ -10,7 +10,7 @@ import com.ptong.worldcities.utils.FileUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class CountriesCollectorTests {
+public class CountryCollectorTests {
 
     private final String RESOURCE_URI = Constants.COUNTRIES_RESOURCE_URI;
     private final String HTML_FILE_PATH = FileUtils.getTestResourcesFolder() + "/countries_html";
