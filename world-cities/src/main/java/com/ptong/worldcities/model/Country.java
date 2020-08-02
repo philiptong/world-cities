@@ -1,6 +1,7 @@
 package com.ptong.worldcities.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import lombok.Data;
 
@@ -13,4 +14,5 @@ public class Country implements Serializable {
     private String alpha2Code;
     private String alpha3Code;
     private String numericCode;
+    private List<AdminDivision> adminDivisions;
 }
