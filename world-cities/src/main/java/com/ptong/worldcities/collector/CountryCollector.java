@@ -12,8 +12,10 @@ import org.jsoup.select.Elements;
 
 public class CountryCollector extends HttpDownloader {
 
-    public String downloadHtml(String uri) throws IOException, InterruptedException {
-        return this.get(uri);
+    private static final String COUNTRIES_RESOURCE_URI = "https://en.wikipedia.org/wiki/ISO_3166-1";
+
+    public String downloadHtml() throws IOException, InterruptedException {
+        return this.get(COUNTRIES_RESOURCE_URI);
     }
 
     public List<Country> parseHtml(String html) {

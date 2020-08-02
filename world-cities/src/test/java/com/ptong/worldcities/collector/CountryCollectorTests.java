@@ -3,7 +3,6 @@ package com.ptong.worldcities.collector;
 import java.io.IOException;
 import java.util.List;
 
-import com.ptong.worldcities.config.Constants;
 import com.ptong.worldcities.model.Country;
 import com.ptong.worldcities.utils.FileUtils;
 import com.ptong.worldcities.utils.JsonUtils;
@@ -13,14 +12,13 @@ import org.junit.jupiter.api.Test;
 
 public class CountryCollectorTests {
 
-    private final String RESOURCE_URI = Constants.COUNTRIES_RESOURCE_URI;
     private final String HTML_FILE_PATH = FileUtils.getTestResourcesFolder() + "/countries_html";
     private final String JSON_FILE_PATH = FileUtils.getTestResourcesFolder() + "/countries_json";
 
     @Test
     public void shouldDownloadHtml() throws IOException, InterruptedException {
         CountryCollector collector = new CountryCollector();
-        String html = collector.downloadHtml(this.RESOURCE_URI);
+        String html = collector.downloadHtml();
         FileUtils.writeToFile(HTML_FILE_PATH, html);
         Assertions.assertTrue(html.length() > 0);
     }

@@ -5,7 +5,11 @@ import java.util.List;
 import com.ptong.worldcities.model.Region;
 import com.ptong.worldcities.model.City;
 
-public interface ResourceParser {
+public interface ResourceCollector {
+
+    String downloadCityHtml();
+
+    String downloadRegionHtml();
 
     List<City> parseCityHtml(String html);
 

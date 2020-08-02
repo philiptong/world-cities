@@ -1,5 +1,5 @@
 package com.ptong.worldcities.collector;
 
-public abstract class RegionCollector extends HttpDownloader implements ResourceParser {
+public abstract class RegionCollector extends HttpDownloader implements ResourceCollector {
 
 }

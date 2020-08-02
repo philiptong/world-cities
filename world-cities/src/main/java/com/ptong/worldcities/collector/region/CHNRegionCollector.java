@@ -15,10 +15,8 @@ import org.jsoup.select.Elements;
 public class CHNRegionCollector extends RegionCollector {
 
     private static final String COUNTRY_CODE = "CHN";
-
-    public String downloadHtml(String uri) throws IOException, InterruptedException {
-        return this.get(uri);
-    }
+    private static final String CHN_REGIONS_RESOURCE_URI = "https://zh.wikipedia.org/wiki/ISO_3166-2:CN";
+    private static final String CHN_CITIES_RESOURCE_URI = "http://www.mca.gov.cn///article/sj/xzqh/2020/2020/2020072805001.html";
 
     @Override
     public List<City> parseCityHtml(String html) {
@@ -55,5 +53,25 @@ public class CHNRegionCollector extends RegionCollector {
             }
         });
         return regions;
+    }
+
+    @Override
+    public String downloadCityHtml() {
+        try {
+            return this.get(CHN_CITIES_RESOURCE_URI);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+            return "";
+        }
+    }
+
+    @Override
+    public String downloadRegionHtml() {
+        try {
+            return this.get(CHN_REGIONS_RESOURCE_URI);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+            return "";
+        }
     }
 }
