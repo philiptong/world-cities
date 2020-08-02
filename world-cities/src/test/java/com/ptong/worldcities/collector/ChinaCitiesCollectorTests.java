@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 public class ChinaCitiesCollectorTests {
 
     private final String RESOURCE_URI = Constants.CHINA_CITIES_RESOURCE_URI;
-    private final String HTML_FILE_PATH = FileUtils.getTestResourcesFolder() + "/china_cities_html";
+    private final String HTML_FILE_PATH = FileUtils.getTestResourcesFolder() + "/china/china_cities_html";
 
     @Test
     public void shouldDownloadHtml() throws IOException, InterruptedException {
