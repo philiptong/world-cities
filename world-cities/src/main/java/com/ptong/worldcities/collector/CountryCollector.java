@@ -10,7 +10,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-public class CountriesCollector extends HttpDownloader {
+public class CountryCollector extends HttpDownloader {
 
     public String downloadHtml(String uri) throws IOException, InterruptedException {
         return this.get(uri);

@@ -1,16 +1,17 @@
-package com.ptong.worldcities.collector;
+package com.ptong.worldcities.collector.country;
 
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.ptong.worldcities.collector.CityCollector;
 import com.ptong.worldcities.model.City;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-public class ChinaCitiesCollector extends CitiesCollector {
+public class ChinaCitiesCollector extends CityCollector {
 
     public String downloadHtml(String uri) throws IOException, InterruptedException {
         return this.get(uri);

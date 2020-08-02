@@ -17,7 +17,7 @@ public class CountriesCollectorTests {
 
     @Test
     public void shouldDownloadHtml() throws IOException, InterruptedException {
-        CountriesCollector collector = new CountriesCollector();
+        CountryCollector collector = new CountryCollector();
         String html = collector.downloadHtml(this.RESOURCE_URI);
         System.out.println(html);
         FileUtils.writeToFile(HTML_FILE_PATH, html);
@@ -26,7 +26,7 @@ public class CountriesCollectorTests {
 
     @Test
     public void shouldParseHtml() throws IOException, InterruptedException {
-        CountriesCollector collector = new CountriesCollector();
+        CountryCollector collector = new CountryCollector();
         String html = FileUtils.readFile(HTML_FILE_PATH);
         List<Country> countries = collector.parseHtml(html);
         System.out.println(countries);
