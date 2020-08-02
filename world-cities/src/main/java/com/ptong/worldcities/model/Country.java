@@ -5,6 +5,9 @@ import java.util.List;
 
 import lombok.Data;
 
+/**
+ * Political entity in ISO 3166-1
+ */
 @Data
 public class Country implements Serializable {
 

@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import lombok.Data;
 
+/**
+ * Second/Third level administrative division
+ */
 @Data
 public class City implements Serializable {
 
