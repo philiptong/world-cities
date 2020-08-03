@@ -5,10 +5,10 @@ import java.io.Serializable;
 import lombok.Data;
 
 /**
- * Second/Third level administrative division, cities or towns
+ * Second/Third level administrative division, county, city or town
  */
 @Data
-public class City implements Serializable {
+public class District implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

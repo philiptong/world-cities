@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.ptong.worldcities.collector.RegionCollector;
 import com.ptong.worldcities.model.Region;
-import com.ptong.worldcities.model.City;
+import com.ptong.worldcities.model.District;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -15,26 +15,26 @@ import org.jsoup.select.Elements;
 public class CHNRegionCollector extends RegionCollector {
 
     private static final String COUNTRY_CODE = "CHN";
-    private static final String CHN_REGIONS_RESOURCE_URI = "https://zh.wikipedia.org/wiki/ISO_3166-2:CN";
-    private static final String CHN_CITIES_RESOURCE_URI = "http://www.mca.gov.cn///article/sj/xzqh/2020/2020/2020072805001.html";
+    private static final String REGIONS_RESOURCE_URI = "https://zh.wikipedia.org/wiki/ISO_3166-2:CN";
+    private static final String DISTRICTS_RESOURCE_URI = "http://www.mca.gov.cn///article/sj/xzqh/2020/2020/2020072805001.html";
 
     @Override
-    public List<City> parseCityHtml(String html) {
+    public List<District> parseDistrictHtml(String html) {
         Document doc = Jsoup.parse(html);
         Elements trs = doc.select("tr[height=19]");
-        List<City> cities = new LinkedList<>();
+        List<District> districts = new LinkedList<>();
         trs.forEach(tr -> {
             Elements tds = tr.select("td");
             String code = tds.get(1).text();
             String name = tds.get(2).text();
             if (code.endsWith("00") && !name.contains("省") && !name.contains("自治区")) {
-                City city = new City();
-                city.setName(name);
-                city.setCountryCode(COUNTRY_CODE);
-                cities.add(city);
+                District district = new District();
+                district.setName(name);
+                district.setCountryCode(COUNTRY_CODE);
+                districts.add(district);
             }
         });
-        return cities;
+        return districts;
     }
 
     @Override
@@ -56,9 +56,9 @@ public class CHNRegionCollector extends RegionCollector {
     }
 
     @Override
-    public String downloadCityHtml() {
+    public String downloadDistrictHtml() {
         try {
-            return this.get(CHN_CITIES_RESOURCE_URI);
+            return this.get(DISTRICTS_RESOURCE_URI);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
             return "";
@@ -68,7 +68,7 @@ public class CHNRegionCollector extends RegionCollector {
     @Override
     public String downloadRegionHtml() {
         try {
-            return this.get(CHN_REGIONS_RESOURCE_URI);
+            return this.get(REGIONS_RESOURCE_URI);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
             return "";
