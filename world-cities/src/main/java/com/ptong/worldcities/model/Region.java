@@ -16,6 +16,6 @@ public class Region implements Serializable {
     private String name;
     private String isoCode;
     private String countryCode;
-    private List<District> cities;
+    private List<District> districts;
 
 }
