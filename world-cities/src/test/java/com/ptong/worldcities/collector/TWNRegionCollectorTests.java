@@ -24,7 +24,6 @@ public class TWNRegionCollectorTests {
         String html = FileUtils.readFile(REGION_HTML_FILE_PATH);
         List<District> districts = collector.parseDistrictHtml(html);
         FileUtils.writeToFile(DISTRICT_JSON_FILE_PATH, JsonUtils.getJsonFromObject(districts));
-        System.out.println(districts.size());
         Assertions.assertTrue(districts.size() == 22);
     }
 
