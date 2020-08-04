@@ -41,6 +41,6 @@ public class TWNRegionCollectorTests {
         String html = FileUtils.readFile(REGION_HTML_FILE_PATH);
         List<Region> regions = collector.parseRegionHtml(html);
         FileUtils.writeToFile(REGION_JSON_FILE_PATH, JsonUtils.getJsonFromObject(regions));
-        Assertions.assertTrue(regions.size() > 0);
+        Assertions.assertTrue(regions.size() == 22);
     }
 }
