@@ -7,7 +7,6 @@ import java.util.List;
 import com.ptong.worldcities.collector.RegionCollector;
 import com.ptong.worldcities.model.District;
 import com.ptong.worldcities.model.Region;
-import com.ptong.worldcities.utils.DataUtils;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -47,7 +46,7 @@ public class JPNRegionCollector extends RegionCollector {
             Elements tds = row.select("td");
             if (tds.size() > 0) {
                 District district = new District();
-                district.setName(DataUtils.removeBrackets(tds.get(1).text()));
+                district.setName(tds.get(1).text());
                 district.setCountryCode(COUNTRY_CODE);
                 district.setRegionCode(tds.get(0).text());
                 districts.add(district);
