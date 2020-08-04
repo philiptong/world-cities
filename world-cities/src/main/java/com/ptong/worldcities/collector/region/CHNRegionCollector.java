@@ -19,6 +19,26 @@ public class CHNRegionCollector extends RegionCollector {
     private static final String DISTRICTS_RESOURCE_URI = "http://www.mca.gov.cn///article/sj/xzqh/2020/2020/2020072805001.html";
 
     @Override
+    public String downloadDistrictHtml() {
+        try {
+            return this.get(DISTRICTS_RESOURCE_URI);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+            return "";
+        }
+    }
+
+    @Override
+    public String downloadRegionHtml() {
+        try {
+            return this.get(REGIONS_RESOURCE_URI);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+            return "";
+        }
+    }
+
+    @Override
     public List<District> parseDistrictHtml(String html) {
         Document doc = Jsoup.parse(html);
         Elements trs = doc.select("tr[height=19]");
@@ -55,23 +75,4 @@ public class CHNRegionCollector extends RegionCollector {
         return regions;
     }
 
-    @Override
-    public String downloadDistrictHtml() {
-        try {
-            return this.get(DISTRICTS_RESOURCE_URI);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-            return "";
-        }
-    }
-
-    @Override
-    public String downloadRegionHtml() {
-        try {
-            return this.get(REGIONS_RESOURCE_URI);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-            return "";
-        }
-    }
 }

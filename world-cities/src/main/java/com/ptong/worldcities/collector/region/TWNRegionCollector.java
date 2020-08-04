@@ -18,6 +18,26 @@ public class TWNRegionCollector extends RegionCollector {
     private static final String REGIONS_RESOURCE_URI = "https://zh.wikipedia.org/wiki/ISO_3166-2:TW";
 
     @Override
+    public String downloadDistrictHtml() {
+        try {
+            return this.get(REGIONS_RESOURCE_URI);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+            return "";
+        }
+    }
+
+    @Override
+    public String downloadRegionHtml() {
+        try {
+            return this.get(REGIONS_RESOURCE_URI);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+            return "";
+        }
+    }
+
+    @Override
     public List<District> parseDistrictHtml(String html) {
         Document doc = Jsoup.parse(html);
         List<District> districts = new LinkedList<>();
@@ -53,23 +73,4 @@ public class TWNRegionCollector extends RegionCollector {
         return regions;
     }
 
-    @Override
-    public String downloadDistrictHtml() {
-        try {
-            return this.get(REGIONS_RESOURCE_URI);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-            return "";
-        }
-    }
-
-    @Override
-    public String downloadRegionHtml() {
-        try {
-            return this.get(REGIONS_RESOURCE_URI);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-            return "";
-        }
-    }
 }
