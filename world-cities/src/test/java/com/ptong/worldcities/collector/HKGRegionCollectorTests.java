@@ -13,7 +13,9 @@ import org.junit.jupiter.api.Test;
 
 public class HKGRegionCollectorTests {
 
-    private final String DISTRICT_JSON_FILE_PATH = FileUtils.getTestResourcesFolder() + "/hkg/districts_json";
+    private static final String COUNTRY_CODE = "hkg";
+
+    private static final String DISTRICT_JSON_FILE_PATH = FileUtils.getResourcesFolder(COUNTRY_CODE) + "districts_json";
 
     @Test
     public void shouldParseDistrictHtml() throws IOException, InterruptedException {

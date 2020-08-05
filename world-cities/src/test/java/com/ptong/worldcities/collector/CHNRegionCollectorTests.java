@@ -14,10 +14,12 @@ import org.junit.jupiter.api.Test;
 
 public class CHNRegionCollectorTests {
 
-    private final String DISTRICT_HTML_FILE_PATH = FileUtils.getTestResourcesFolder() + "/chn/districts_html";
-    private final String REGION_HTML_FILE_PATH = FileUtils.getTestResourcesFolder() + "/chn/regions_html";
-    private final String DISTRICT_JSON_FILE_PATH = FileUtils.getTestResourcesFolder() + "/chn/districts_json";
-    private final String REGION_JSON_FILE_PATH = FileUtils.getTestResourcesFolder() + "/chn/regions_json";
+    private static final String COUNTRY_CODE = "chn";
+
+    private static final String DISTRICT_HTML_FILE_PATH = FileUtils.getResourcesFolder(COUNTRY_CODE) + "districts_html";
+    private static final String REGION_HTML_FILE_PATH = FileUtils.getResourcesFolder(COUNTRY_CODE) + "regions_html";
+    private static final String DISTRICT_JSON_FILE_PATH = FileUtils.getResourcesFolder(COUNTRY_CODE) + "districts_json";
+    private static final String REGION_JSON_FILE_PATH = FileUtils.getResourcesFolder(COUNTRY_CODE) + "regions_json";
 
     @Test
     public void shouldDownloadDistrictHtml() throws IOException, InterruptedException {

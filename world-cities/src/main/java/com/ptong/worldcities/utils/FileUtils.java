@@ -15,8 +15,15 @@ public class FileUtils {
 
     private static final Charset CHARSET = Charset.forName("UTF-8");
 
-    public static String getTestResourcesFolder() {
+    public static String getResourcesFolder() {
         String path = "src/test/resources";
+        File file = new File(path);
+        String absolutePath = file.getAbsolutePath();
+        return absolutePath;
+    }
+
+    public static String getResourcesFolder(String countryCode) {
+        String path = "src/test/resources/" + countryCode + "/";
         File file = new File(path);
         String absolutePath = file.getAbsolutePath();
         return absolutePath;

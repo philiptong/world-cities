@@ -14,9 +14,11 @@ import org.junit.jupiter.api.Test;
 
 public class KORRegionCollectorTests {
 
-    private final String REGION_HTML_FILE_PATH = FileUtils.getTestResourcesFolder() + "/kor/regions_html";
-    private final String DISTRICT_JSON_FILE_PATH = FileUtils.getTestResourcesFolder() + "/kor/districts_json";
-    private final String REGION_JSON_FILE_PATH = FileUtils.getTestResourcesFolder() + "/kor/regions_json";
+    private static final String COUNTRY_CODE = "kor";
+
+    private static final String REGION_HTML_FILE_PATH = FileUtils.getResourcesFolder(COUNTRY_CODE) + "regions_html";
+    private static final String DISTRICT_JSON_FILE_PATH = FileUtils.getResourcesFolder(COUNTRY_CODE) + "districts_json";
+    private static final String REGION_JSON_FILE_PATH = FileUtils.getResourcesFolder(COUNTRY_CODE) + "regions_json";
 
     @Test
     public void shouldParseDistrictHtml() throws IOException, InterruptedException {
