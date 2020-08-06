@@ -23,9 +23,9 @@ public class FileUtils {
     }
 
     public static String getResourcesFolder(String countryCode) {
-        String path = "src/test/resources/" + countryCode + "/";
+        String path = "src/test/resources/" + countryCode;
         File file = new File(path);
-        String absolutePath = file.getAbsolutePath();
+        String absolutePath = file.getAbsolutePath() + "/";
         return absolutePath;
     }
 
