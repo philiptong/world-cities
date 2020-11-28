@@ -14,18 +14,18 @@ import java.nio.charset.Charset;
 public class FileUtils {
 
     private static final Charset CHARSET = Charset.forName("UTF-8");
+    private static final String RESOURCE_FOLDER = "src/test/resources";
 
     public static String getResourcesFolder() {
-        String path = "src/test/resources";
-        File file = new File(path);
+        File file = new File(RESOURCE_FOLDER);
         String absolutePath = file.getAbsolutePath();
         return absolutePath;
     }
 
     public static String getResourcesFolder(String countryCode) {
-        String path = "src/test/resources/" + countryCode;
+        String path = RESOURCE_FOLDER + File.separator + countryCode;
         File file = new File(path);
-        String absolutePath = file.getAbsolutePath() + "/";
+        String absolutePath = file.getAbsolutePath() + File.separator;
         return absolutePath;
     }
 

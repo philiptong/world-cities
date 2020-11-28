@@ -1,21 +1,21 @@
 package com.ptong.worldcities.model;
 
 import java.io.Serializable;
-import java.util.List;
 
 import lombok.Data;
 
 /**
- * Principle administrative division for Countries, ISO 3166-2
+ * Second/Third level administrative division, county, city or town
  */
 @Data
-public class Region implements Serializable {
+public class City implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private String name;
-    private String isoCode;
+    private double lat;
+    private double lng;
     private String countryCode;
-    private List<City> cities;
+    private String regionCode;
 
 }

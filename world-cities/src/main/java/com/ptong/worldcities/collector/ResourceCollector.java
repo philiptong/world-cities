@@ -3,15 +3,15 @@ package com.ptong.worldcities.collector;
 import java.util.List;
 
 import com.ptong.worldcities.model.Region;
-import com.ptong.worldcities.model.District;
+import com.ptong.worldcities.model.City;
 
 public interface ResourceCollector {
 
-    String downloadDistrictHtml();
+    String downloadCityHtml();
 
     String downloadRegionHtml();
 
-    List<District> parseDistrictHtml(String html);
+    List<City> parseCityHtml(String html);
 
     List<Region> parseRegionHtml(String html);
 }

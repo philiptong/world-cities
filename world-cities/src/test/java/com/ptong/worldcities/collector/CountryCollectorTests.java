@@ -12,8 +12,8 @@ import org.junit.jupiter.api.Test;
 
 public class CountryCollectorTests {
 
-    private static final String HTML_FILE_PATH = FileUtils.getResourcesFolder() + "/countries_html";
-    private static final String JSON_FILE_PATH = FileUtils.getResourcesFolder() + "/countries_json";
+    private static final String HTML_FILE_PATH = FileUtils.getResourcesFolder() + "/countries.html";
+    private static final String JSON_FILE_PATH = FileUtils.getResourcesFolder() + "/countries.json";
 
     @Test
     public void shouldDownloadHtml() throws IOException, InterruptedException {
