@@ -9,7 +9,7 @@ import com.ptong.worldcities.model.Region;
 
 public class HKCollector extends RegionCollector {
 
-    public static final String COUNTRY_CODE = "HKG";
+    public static final String COUNTRY_CODE = "HK";
 
     @Override
     public String downloadCityHtml() {
