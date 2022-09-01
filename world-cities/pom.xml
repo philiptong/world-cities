@@ -9,7 +9,7 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <junit.jupiter.version>5.5.2</junit.jupiter.version>
-    <jsoup.version>1.11.3</jsoup.version>
+    <jsoup.version>1.15.3</jsoup.version>
     <org.projectlombok.version>1.18.12</org.projectlombok.version>
     <com.fasterxml.jackson.core.version>2.11.1</com.fasterxml.jackson.core.version>
   </properties>
